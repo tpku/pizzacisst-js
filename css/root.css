@@ -1,7 +1,24 @@
 :root {
-    --window-tint: linear-gradient(90deg, rgb(73, 130, 82) 0%, rgba(81, 186, 93, 0.81) 11%, rgba(44, 221, 91, 0.157) 41%, rgba(37, 227, 62, 0.135) 51%, rgba(65, 255, 84, 0.729) 85%, rgba(0, 255, 64, 0) 100%);
-    --btn-hover: #ff0062;
-    --space-black: #09021a;
-    --white: #fff4fc;
+  --btn-hover: #ff0062;
+  --space-black: #09021a;
+  --background: #ff440000;
+  --white: #fff4fc;
+}
 
+@font-face {
+  font-family: 'Space Mono';
+  src: url('../fonts/SpaceMono-Bold.woff2') format('woff2'),
+    url('../fonts/SpaceMono-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Space Mono';
+  src: url('../fonts/SpaceMono-Bold.woff2') format('woff2'),
+    url('../fonts/SpaceMono-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }

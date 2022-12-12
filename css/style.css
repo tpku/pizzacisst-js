@@ -1,17 +1,19 @@
 * {
   box-sizing: border-box;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 body {
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
   width: 100vw;
   height: 100vh;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: 'Space Mono';
+  font-weight: bold;
+  font-style: normal;
 }
 
 body img {
@@ -21,8 +23,12 @@ body img {
 }
 
 @keyframes pizzaSpin {
-    0% {transform: rotate(0);}
-    100% {transform: rotate(360deg);}
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .headings {
@@ -33,7 +39,8 @@ body img {
   pointer-events: none;
 }
 
-h1, h2 {
+h1,
+h2 {
   margin: 0;
   padding: 0;
 }
@@ -48,21 +55,44 @@ h2 {
 
 h1 {
   font-weight: 800;
-  font-size: 20rem;
+  font-size: 15rem;
   animation: textAnimation 10s ease-in-out infinite;
   opacity: 20%;
+  text-align: center;
 }
 
 @keyframes textAnimation {
-    0% {
-        color: #00a2ff;
-    }
-    50% {
-        color: #ff0062;
-    }
-    100% {
-        color: #00a2ff;
-    }
+  0% {
+    color: #00a2ff;
+  }
+  50% {
+    color: #ff0062;
+  }
+  100% {
+    color: #00a2ff;
+  }
+}
+
+p {
+  position: fixed;
+  top: 20%;
+  z-index: 2;
+  font-size: 1rem;
+  text-align: center;
+  color: var(--btn-hover);
+}
+
+p.fade {
+  animation: pAnimation 1s ease-in 3;
+}
+
+@keyframes pAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .rain-container {
@@ -84,7 +114,6 @@ div.topping {
   animation: animate 5s linear infinite;
 }
 
-
 @keyframes animate {
   0% {
     transform: translateY(-520px);
@@ -96,31 +125,30 @@ div.topping {
 }
 
 div.base img,
-div.topping img  {
+div.topping img {
   width: 100%;
   height: 100%;
   animation: pizzaSpin 5s linear infinite;
 }
 
 .btn-wrapper {
-  background: var(--window-tint);
   z-index: 8;
   padding: 10px;
   width: fit-content;
-  height: 160px;
+  height: fit-content;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: flex-start;
   position: fixed;
   display: flex;
-  bottom: 0;
+  bottom: 40px;
 }
 
 button {
   padding: 5px;
   border: none;
-  background-color: #ff440000;
+  background-color: var(--background);
   width: 100px;
   height: 100px;
   border-radius: 100%;
@@ -137,18 +165,8 @@ button img {
   object-fit: cover;
 }
 
-button p {
-  font-size: 14px;
-  font-weight: 800;
-  color: var(--white);
-}
-
-
 button:hover {
   background-color: var(--btn-hover);
-}
-button:hover p{
-  color: var(--btn-hover);
 }
 
 .remove {
@@ -159,25 +177,25 @@ button:hover p{
   * {
     cursor: none;
   }
-  
+
   .pizza {
     z-index: 9;
     pointer-events: none;
     width: 100px;
     height: 100px;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     position: absolute;
     pointer-events: none;
   }
-  
+
   .pizza img {
     width: 100%;
     height: 100%;
     animation: pizzaSpin 3s linear infinite;
   }
-  
+
   h1 {
-    font-size: 40rem;
+    font-size: 35rem;
   }
 
   h2 {
@@ -185,4 +203,11 @@ button:hover p{
     transform: translateY(-55px);
   }
 
+  p {
+    font-size: 2rem;
+  }
+
+  .btn-wrapper {
+    bottom: 20px;
+  }
 }
