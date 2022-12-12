@@ -1,12 +1,14 @@
-INSERT MANDATORY GIF
+![Cool Cat Wearing Glasses in front of awesome pizza rain](https://64.media.tumblr.com/98df91441069788021d8fd515889b963/tumblr_nguxcvRQjN1qa6w7zo1_400.gifv)
 
-# Project Title
+# The Useless Pizza
 
-Text about the project. This would also be a great place to link the game on Netlify.
+A useless project built with vanilla html, css and javascript. https://pizzacisst-js.vercel.app/
 
 # Installation
 
-Add the installation instructions.
+Open up a browser of choice and head over to https://pizzacisst-js.vercel.app/.
+
+Or clone the repository and open up the project in a code editor and kick start the index-file with live-server. Enjoy the adventure!
 
 # Code Review
 
