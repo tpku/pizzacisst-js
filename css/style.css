@@ -1,0 +1,188 @@
+* {
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  margin:0;
+  padding:0;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes pizzaSpin {
+    0% {transform: rotate(0);}
+    100% {transform: rotate(360deg);}
+}
+
+.headings {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+}
+
+h1, h2 {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  z-index: 10;
+  font-size: 1rem;
+  transform: translateY(-46px);
+  animation: textAnimation 3s ease-in-out infinite;
+  position: absolute;
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 20rem;
+  animation: textAnimation 10s ease-in-out infinite;
+  opacity: 20%;
+}
+
+@keyframes textAnimation {
+    0% {
+        color: #00a2ff;
+    }
+    50% {
+        color: #ff0062;
+    }
+    100% {
+        color: #00a2ff;
+    }
+}
+
+.rain-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  position: absolute;
+}
+
+div.base,
+div.topping {
+  z-index: 4;
+  width: 100px;
+  height: 100px;
+  transform: translateY(-500px);
+  position: absolute;
+  animation: animate 5s linear infinite;
+}
+
+
+@keyframes animate {
+  0% {
+    transform: translateY(-520px);
+  }
+
+  100% {
+    transform: translateY(calc(100vh + 520px));
+  }
+}
+
+div.base img,
+div.topping img  {
+  width: 100%;
+  height: 100%;
+  animation: pizzaSpin 5s linear infinite;
+}
+
+.btn-wrapper {
+  background: var(--window-tint);
+  z-index: 8;
+  padding: 10px;
+  width: fit-content;
+  height: 160px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  position: fixed;
+  display: flex;
+  bottom: 0;
+}
+
+button {
+  padding: 5px;
+  border: none;
+  background-color: #ff440000;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin: 15px;
+}
+
+button img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+button p {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--white);
+}
+
+
+button:hover {
+  background-color: var(--btn-hover);
+}
+button:hover p{
+  color: var(--btn-hover);
+}
+
+.remove {
+  display: none;
+}
+
+@media screen and (min-width: 480px) {
+  * {
+    cursor: none;
+  }
+  
+  .pizza {
+    z-index: 9;
+    pointer-events: none;
+    width: 100px;
+    height: 100px;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    pointer-events: none;
+  }
+  
+  .pizza img {
+    width: 100%;
+    height: 100%;
+    animation: pizzaSpin 3s linear infinite;
+  }
+  
+  h1 {
+    font-size: 40rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    transform: translateY(-55px);
+  }
+
+}
