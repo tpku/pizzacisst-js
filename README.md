@@ -39,5 +39,7 @@ Instead it can look like this:
 
 Tested by the following people:
 
-1. Jane Doe
-2. John Doe
+1. Jonas Mårtensson
+2. Anna Brumark
+3. Dan Fogelberg
+4. Josef Forkman
